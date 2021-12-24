@@ -1,0 +1,30 @@
+.bodyDiv {
+    background-color:#FFC0CB;
+    align-items: center;
+}
+
+.content {
+    padding:5px;
+    margin-left:20px;
+    margin-right:20px;
+    align-items: center;
+    text-align: center;
+    background:#002D62;
+    color: white;
+    font-size: 20px;
+    font-family:sans-ser;
+    border-radius: 0.9em;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.1); 
+}
+
+.chatbot{
+    padding: 10px;
+    margin-left:20px;
+    margin-right:20px;
+    margin-top:10px;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    border-radius: 0.9em;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.1);      
+}
