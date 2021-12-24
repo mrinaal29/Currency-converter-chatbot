@@ -3,7 +3,7 @@ import requests
 
 app = Flask(__name__)
 
-@app.route('/',methods = ['POST'])
+@app.route('/',methods = ['GET','POST'])
 def index():
     data = request.get_json()
     source_currency = data['queryResult']['parameters']['unit-currency']['currency']
