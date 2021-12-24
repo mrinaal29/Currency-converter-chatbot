@@ -1,10 +1,10 @@
 from flask import Flask,request,jsonify
 import requests
-import streamlit
+# import gunicorn
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/',methods = ['POST'])
 def index():
     data = request.get_json()
     source_currency = data['queryResult']['parameters']['unit-currency']['currency']
@@ -31,3 +31,5 @@ def fetch_conversion_factor(source,target):
 
 if __name__ == '__main__':
     app.run()
+    #web: sh setup.sh && streamlit run demo.py
+
