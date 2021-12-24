@@ -9,7 +9,7 @@ def index():
     return render_template('home.html')
 
 
-@app.route('/api',methods = ['POST'])
+@app.route('/api/',methods = ['POST'])
 def api():
     data = request.get_json()
     source_currency = data['queryResult']['parameters']['unit-currency']['currency']
