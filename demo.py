@@ -1,10 +1,14 @@
-from flask import Flask,request,jsonify
+from flask import Flask,request,jsonify,render_template
 import requests
 # import gunicorn
 
 app = Flask(__name__)
 
 @app.route('/',methods = ['POST'])
+
+def home():
+    return render_template('home.html')
+    
 def index():
     data = request.get_json()
     source_currency = data['queryResult']['parameters']['unit-currency']['currency']
