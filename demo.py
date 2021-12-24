@@ -4,7 +4,7 @@ import streamlit
 
 app = Flask(__name__)
 
-@app.route('/',methods = ['GET','POST'])
+@app.route('/',methods = ['POST'])
 def index():
     data = request.get_json()
     source_currency = data['queryResult']['parameters']['unit-currency']['currency']
@@ -30,4 +30,4 @@ def fetch_conversion_factor(source,target):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
