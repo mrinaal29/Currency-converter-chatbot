@@ -4,12 +4,13 @@ import requests
 
 app = Flask(__name__)
 
-@app.route('/',methods = ['POST'])
-
-def home():
-    return render_template('home.html')
-    
+@app.route('/')
 def index():
+    return render_template('home.html')
+
+
+@app.route('/api',methods = ['POST'])
+def api():
     data = request.get_json()
     source_currency = data['queryResult']['parameters']['unit-currency']['currency']
     amount = data['queryResult']['parameters']['unit-currency']['amount']
@@ -34,6 +35,6 @@ def fetch_conversion_factor(source,target):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
     #web: sh setup.sh && streamlit run demo.py
 
